@@ -1,0 +1,29 @@
+@use "../abstracts/mixins" as *;
+
+.header {
+  margin: 50px 166px 0;
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 56px;
+
+  @include breakpoint-down(medium) {
+    margin: 40px 40px 0;
+  }
+
+  @include breakpoint-down(small) {
+    margin: 20px 18px 0;
+  }
+
+  &__logo {
+    width: 78px;
+    height: 25px;
+    position: relative;
+    bottom: 3px;
+  }
+
+}

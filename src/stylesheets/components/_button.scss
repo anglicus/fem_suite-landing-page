@@ -1,0 +1,49 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+
+.cta-small {
+  width: 219px;
+  height: 56px;
+  border: 2px solid $vdkBlue;
+  border-radius: 6px;
+
+  background-color: $offWhite;
+
+  color: $vdkBlue;
+  font-size: 1rem;
+  letter-spacing: -0.01rem;
+  line-height: 2rem;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $vdkBlue;
+    color: $nearWhite;
+  }
+
+  @include breakpoint-down(small) {
+    width: 182px;
+    height: 48px;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+}
+
+.cta-large {
+  width: 256px;
+  height: 61px;
+  border: none;
+  border-radius: 6px;
+
+  background-color: $vdkBlue;
+
+  color: $nearWhite;
+  font-size: 1.125rem;
+  letter-spacing: -0.01rem;
+  line-height: 2rem;
+  font-weight: 700;
+
+  &:hover {
+    background-image: linear-gradient(155deg, $gradient1, $gradient2, $gradient3);
+    color: $nearWhite;
+  }
+}

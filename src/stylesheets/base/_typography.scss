@@ -1,0 +1,129 @@
+@use "../abstracts/mixins" as *;
+
+
+html {
+  font-size: 100%;
+}
+
+// heading XL
+h1 {
+  font-size: 4.5rem;
+  line-height: 4.875rem;
+  letter-spacing: -0.0625rem;
+  font-weight: 400;
+
+  @include breakpoint-down(medium) {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
+  @include breakpoint-down(small) {
+    font-size: 2.375rem;
+    line-height: 2.75rem;
+    letter-spacing: -0.05rem;
+  }
+}
+
+// heading L
+h2 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  letter-spacing: -0.03125rem;
+  font-weight: 400;
+
+  @include breakpoint-down(medium) {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  @include breakpoint-down(small) {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+
+// heading M
+h3 {
+  font-size: 1.125rem;
+  line-height: 2rem;
+  letter-spacing: -0.0125rem;
+  text-transform: uppercase;
+
+  // same on all screen sizes
+}
+
+// heading S
+h4 {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: 0.15625rem;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  // same on all screen sizes
+}
+
+// body
+p {
+  font-size: 1.125rem;
+  line-height: 2rem;
+  letter-spacing: 0.004rem;
+
+  @include breakpoint-down(medium) {
+    font-size: 1rem;
+    line-height: 1.75rem;
+
+    // same on small
+  }
+
+  &.quote {
+    font-size: 1.25rem;
+    line-height: 2.1875rem;
+    letter-spacing: 0.005rem;
+    
+    @include breakpoint-down(medium) {
+      font-size: 1.125rem;
+      line-height: 2rem;
+  
+      // same on small
+    }
+
+  }
+
+  &.copyright {
+    font-size: 0.9375rem;
+    line-height: 2rem;
+    letter-spacing: 0.0004rem;
+
+    // same on all screen sizes
+  }
+}
+
+.stats__value {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  letter-spacing: -0.03125rem;
+  font-weight: 700;
+
+  // same on all screen sizes
+}
+
+.stats__label {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: 0.15625rem;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  // same on all screen sizes
+}
+
+.bold {
+  font-weight: 700;
+}
+
+button {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}

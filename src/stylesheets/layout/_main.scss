@@ -1,0 +1,268 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+main {
+  margin: 67px 166px 0;
+
+  display: grid;
+  grid-template-areas: 
+            "summary stats"
+            "testimonial testimonial";
+
+  @include breakpoint-down(medium) {
+    display: flex;
+    flex-direction: column;
+    margin: 67px 40px 0;
+  }
+
+  @include breakpoint-down(small) {
+    margin: 67px 0 0;
+  }
+}
+
+.summary {
+  grid-area: summary;
+  position: relative;
+  width: 824px;
+  height: 600px;
+  
+  @include breakpoint-down(medium) {
+    height: 582px;
+    width: 100%;
+  }
+
+  @include breakpoint-down(small) {
+    width: auto;
+    padding: 0 18px;
+  }
+
+  &__text-div {
+    width: 635px;
+    margin-top: 103px;
+
+    @include breakpoint-down(medium) {
+      width: auto;
+      padding-right: 160px;
+    }
+
+    @include breakpoint-down(small) {
+      width: auto;
+      margin-top: 13px;
+      padding-right: 0;
+    }
+
+  }
+
+  &__blurb {
+    margin-top: 40px;
+    width: 350px;
+
+    @include breakpoint-down(small) {
+      margin-top: 32px;
+    }
+  }
+
+  &__cta {
+    margin-top: 52px;
+
+    @include breakpoint-down(medium) {
+      margin-top: 39px;
+    }
+
+    @include breakpoint-down(small) {
+      margin-top: 32px;
+    }
+
+  }
+
+  &__curve {
+    position: absolute;
+    left: 289px;
+    top: 47px;
+    height: 36px;
+    width: 288px;
+
+    @include breakpoint-down(medium) {
+      left: 222px;
+      top: 56px;
+      height: 29px;
+      width: 231px;
+    }
+
+    @include breakpoint-down(small) {
+      left: 169px;
+      top: -15px;
+      height: 19px;
+      width: 151px;
+    }
+  }
+
+  &__image-desktop-tablet {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include breakpoint-down(medium) {
+      width: 281px;
+      height: 482px;
+      top: 13px;
+      right: 0px;
+    }
+
+    @include breakpoint-down(small) {
+      display: none;
+    }
+  }
+
+  &__image-mobile {
+    display: none;
+
+    @include breakpoint-down(small) {
+      display: block;
+      margin: 56px auto 0;
+    }
+
+  }
+}
+
+.stats {
+  grid-area: stats;
+
+  margin-top: 106px;
+  margin-left: 18px;
+  
+  &>div:not(:first-child) {
+    margin-top: 63px;
+  }
+
+  @include breakpoint-down(medium) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 58px;
+
+    &>div:not(:first-child) {
+      margin-top: 0px;
+    }
+
+    @include breakpoint-down(small) {
+      flex-direction: column;
+  
+      margin: 80px 0 0;
+  
+      &>div:not(:first-child) {
+        margin-top: 32px;
+      }
+    }
+
+  }
+
+  &__box {
+    @include breakpoint-down(medium) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+  }
+
+  &__label {
+    margin-top: 1px;
+  }
+}
+
+
+.testimonial {
+  grid-area: testimonial;
+  position: relative;
+  background-image: radial-gradient(circle at 290px 330px, $gradient2, $vdkBlue 20% 10%);
+  border-radius: 15px;
+
+  margin-top: 199px;
+
+  @include breakpoint-down(medium) {
+    background-image: radial-gradient(circle at 50% 90px, $gradient2, $vdkBlue 20% 10%);
+    margin-top: 275px;
+  }
+
+  @include breakpoint-down(small) {
+    margin-top: 235px;
+    background-image: radial-gradient(circle at 50% 90px, $gradient2, $vdkBlue 20% 10%);
+  }
+
+  &__image-desktop {
+    height: 590px;
+    width: 360px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 122px;
+    
+    @include breakpoint-down(medium) {
+      display: none;
+    }    
+  }
+
+  &__image-tablet-mobile {
+    display: none;
+
+    @include breakpoint-down(medium) {
+      display: block;
+      position: absolute;
+      top: -182px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      height: 402px;
+      width: 252px;
+    }
+
+    @include breakpoint-down(small) {
+      top: -180px;
+    }
+  }
+
+  &__curve {
+    position: absolute;
+    top: 160px;
+    left: 520px;
+
+    @include breakpoint-down(medium) {
+      top: 262px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 49px;
+      height: 40px;
+    }
+
+  }
+
+  &__text-div {
+    color: $nearWhite;
+
+    margin-left: 635px;
+    margin-top: 87px;
+    margin-right: 100px;
+    margin-bottom: 88px;
+
+    @include breakpoint-down(medium) {
+      margin: 336px 58px 65px;
+      text-align: center;
+    }
+
+    @include breakpoint-down(small) {
+      margin: 336px 18px 65px;
+    }
+  }
+
+  &__quote {
+    margin-top: 41px;
+  }
+
+  &__name {
+    margin-top: 40px;
+  }
+}

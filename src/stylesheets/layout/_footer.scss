@@ -1,0 +1,53 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: -264px 0 0;
+  padding: 357px 166px 67px;
+
+  background-color: $offWhite;
+
+  @include breakpoint-down(medium) {
+    margin: -466px 0 0;
+    padding: 535px 40px 67px;
+  }
+
+  @include breakpoint-down(small) {
+    flex-direction: column;
+    margin: -13px 0 0;
+    padding: 71px 0 74px;
+  }
+
+  &__logo {
+    width: 81px;
+    height: 26px;
+    margin-bottom: 13px;
+
+    @include breakpoint-down(small) {
+      margin-bottom: 38px;
+    }
+
+  }
+
+  &__copyright {
+    margin-left: 32px;
+
+    @include breakpoint-down(small) {
+      margin-left: 0px;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__social-logo {
+
+    &:not(:first-child) {
+      margin-left: 22px;
+    }
+  }
+
+}
